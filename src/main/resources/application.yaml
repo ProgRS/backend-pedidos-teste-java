@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: backend-pedidos
+  rabbitmq:
+    host: jaragua-01.lmq.cloudamqp.com
+    port: 5672
+    username: bjnuffmq
+    password: gj-YQIiEXyfxQxjsZtiYDKeXIT8ppUq7
+    virtual-host: bjnuffmq
+
+server:
+  port: 8080
+
+app:
+  rabbit:
+    pedidos-queue: pedidos.entrada.luis-trindade
+    pedidos-dlq: pedidos.entrada.luis-trindade.dlq
+    status-sucesso-queue: pedidos.status.sucesso.luis-trindade
+    status-falha-queue: pedidos.status.falha.luis-trindade
